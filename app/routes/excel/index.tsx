@@ -53,7 +53,7 @@ export default function Signup() {
         <p className="mt-10 ml-5 mb-5">
           <label>开始数值:</label>
           <input
-            defaultValue={1}
+            // defaultValue={1}
             style={{
               width: 400,
               marginLeft: 10,
@@ -67,7 +67,7 @@ export default function Signup() {
         <p className="ml-5 mb-5">
           <label>结束数值:</label>
           <input
-            defaultValue={20}
+            // defaultValue={20}
             style={{
               width: 400,
               marginLeft: 10,
@@ -82,7 +82,8 @@ export default function Signup() {
           <label>每次变化数值:</label>
 
           <input
-            defaultValue={2}
+            // defaultValue={2}
+            step="0.01"
             style={{
               width: 400,
               marginLeft: 10,
@@ -97,7 +98,7 @@ export default function Signup() {
           <label>每次小数浮动位数:</label>
 
           <input
-            defaultValue={1}
+            defaultValue={2}
             style={{
               width: 400,
               marginLeft: 10,
@@ -126,7 +127,7 @@ export default function Signup() {
           <label>平稳后持续时间(分钟):</label>
 
           <input
-            defaultValue={1}
+            // defaultValue={1}
             style={{
               width: 400,
               marginLeft: 10,
@@ -145,7 +146,7 @@ export default function Signup() {
               marginLeft: 10,
             }}
             required
-            type="number"
+            type="datetime-local"
             name="startTime"
             placeholder="开始时间"
           />

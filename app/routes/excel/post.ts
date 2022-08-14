@@ -130,8 +130,10 @@ export const createExcel = async (_form: any) => {
     //   const
   };
 
-  const startTime = moment("2022/07/03 12:19:12").valueOf();
+  // const startTime = moment("2022/07/03 12:19:12").valueOf();
+  const startTime = moment(_form.startTime).valueOf();
   // console.log("startTime", startTime);
+  // console.log("llll", moment(_form.startTime).valueOf());
   // genNewArr(100, 60, 5, 2, 20, 5, startTime);
   const changeArr = genNewArr(
     _form.start,
