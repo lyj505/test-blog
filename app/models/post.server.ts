@@ -1,9 +1,12 @@
 import { prisma } from "~/db.server";
 
-type Post = {
-  slug: string;
-  title: string;
-};
+// type Post = {
+//   slug: string;
+//   title: string;
+// };
+
+import type { Post } from "@prisma/client";
+export type { Post };
 
 export async function getPosts(): Promise<Array<Post>> {
   return prisma.post.findMany();
@@ -25,4 +28,11 @@ export async function getPost(slug: string) {
       slug,
     },
   });
+}
+
+// ...
+export async function createPost(
+  post: Pick<Post, "slug" | "title" | "markdown">
+) {
+  return prisma.post.create({ data: post });
 }

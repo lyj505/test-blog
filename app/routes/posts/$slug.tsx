@@ -7,7 +7,6 @@ import { marked } from "marked";
 
 export const loader: LoaderFunction = async ({ params }) => {
   invariant(params.slug, `params.slug is required`);
-  console.log("params", params);
   const post = await getPost(params.slug);
   invariant(post, `Post not found: ${params.slug}`);
   const html = marked(post.markdown);
